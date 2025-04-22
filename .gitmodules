@@ -1,0 +1,3 @@
+[submodule "OpenImage"]
+	path = OpenImage
+	url = git@github.com:nt-lib/OpenImage.git
