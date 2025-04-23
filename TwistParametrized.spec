@@ -1,0 +1,10 @@
+{
+  Magma
+  {
+    +magma.spec
+  }
+  OpenImage
+  {
+    +OpenImage.spec
+  }
+}
