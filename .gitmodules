@@ -1,3 +1,6 @@
 [submodule "OpenImage"]
 	path = OpenImage
 	url = git@github.com:nt-lib/OpenImage.git
+[submodule "Magma"]
+	path = Magma
+	url = git@github.com:AndrewVSutherland/Magma.git
