@@ -50,7 +50,7 @@ function IsTwistParametrized(G : G_SL2:=0)
     index := GL2Index(G);
     sl2_N, G_SL2 := SL2Level(G_SL2);
     sl2_index := SL2Index(G_SL2);
-    NN := LCM(N, sl2_N);
+    NN := LCM(#BaseRing(G), sl2_N);
     GG := GL2Lift(G, NN);
 
     base_groups := [];
@@ -87,6 +87,52 @@ function IsTwistParametrized(G : G_SL2:=0)
         return false, base_groups;
     end if;
     return true, base_groups;
+end function;
+
+
+function CheckIntermediate(G)
+// The input is an agreeable group G, with finitely many points and twist parametrized. We want to check that whether there exists an agreeable overgroup H, G<H, with finitely many points, and which is not twist parametrized. 
+G_SL2 := SL2Intersection(G);
+
+N:= GL2Level(G);
+index := GL2Index(G);
+sl2_N, G_SL2 := SL2Level(G_SL2);
+sl2_index := SL2Index(G_SL2);
+NN := LCM(N, sl2_N);
+GG := GL2Lift(G, NN);
+
+surprise_groups := [];
+    for a in data do
+        //a`key;
+        if N mod a`level ne 0 then continue; end if;
+        if index mod a`index ne 0 then continue; end if;
+
+        if (not (a`is_agreeable)) or (a`genus le 1 and (a`has_infinitely_many_points)) then
+           continue;
+        end if;
+        //if a`commutator_index mod sl2_index ne 0 then continue; end if;
+
+
+        if a`level eq 1 then
+            H := GL(2, Integers(NN));
+            HH := H;
+        else
+            H:=a`G;
+            HH:=GL2Lift(H, NN);
+        end if;
+
+        if not IsConjugateSubgroup(GL(2, Integers(NN)), HH, GG) then continue; end if;
+
+        if IsTwistParametrized(HH) then
+            continue;
+        end if;
+
+        Append(~surprise_groups,a);
+    end for;
+    if #surprise_groups eq 0 then
+        return false, surprise_groups;
+    end if;
+    return true, surprise_groups;
 end function;
 
 
@@ -216,6 +262,15 @@ for j in todo2 do
   end if;
   print "overgroups",  Integers() ! GL2Level(G), #overgroups,  genera;
 end for;
+
+
+for j in todo3 do
+	b,l,G := FindAgreeableClosure(Z,j);
+	tr,gps:= CheckIntermediate(G);
+	j,tr,gps;
+end for;
+	
+
 
 
 //the below is old stuff
@@ -354,4 +409,5 @@ for j in exceptional_j do
     parametrized; N; GL2Index(G);
 end for;
 */
+
 
