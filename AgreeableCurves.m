@@ -18,7 +18,7 @@ function ComputeGL2Data(j)
     return gens, level, genus, index;
 end function;
 
-function GetLabel(gens, level, genus, index, fname)
+function GetLabel(gens, level, genus, index, j)
     code := [];
     code := [ "import lmfdb", "from lmfdb import db" ];
     search_str := "db.gps_gl2zhat_fine.lucky({'level':";
