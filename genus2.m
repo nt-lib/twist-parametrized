@@ -8,11 +8,17 @@ eqns := [x^2*z+x*y*z-3*x*z^2-2*y*z^2+z^3+2*z^2*w, x^2*y+x*y^2-3*x*y*z-2*y^2*z+y*
 
 C := Curve(P, eqns);
 A := AutomorphismGroup(C);
-jmap := map<P->P1 | [j[1]*2^6*5^3, j[2]]>;
+jmap := map<C->P1 | [j[1]*2^6*5^3, j[2]]>;
 smallpts := PointSearch(C, 100);
 //we found the special point and the known CM point
 assert {jmap(Q) : Q in smallpts} eq {P1![0,1], P1![210720960000000/16807, 1]}; 
 assert (A.1)(smallpts[1]) eq smallpts[2];
+
+//show that there are no other rational points corresponding to these j-invariants by inverting the j-map
+j := P1![210720960000000/16807, 1];
+inv_image := j@@jmap;
+asesert Dimension(pts) eq 0;
+assert #RationalPoints(pts) eq 1; //note that rational points provably returns the rational points in dim = 0
 
 //Xns^+(16)
 
@@ -26,7 +32,7 @@ eqns := [x^2-y^2-x*w+y*w-y*t, y^2+y*z+x*w+x*t, x*y+x*z-z*w-w^2+y*t+t^2, x*y+x*z+
 
 C := Curve(P, eqns);
 
-jmap := map<P->P1 | [j[1]*2^9, j[2]]>;
+jmap := map<C->P1 | [j[1]*2^9, j[2]]>;
 to_ws := map<P -> P2 | map_to_ws_model>;
 
 smallpts := PointSearch(C, 1000);
@@ -50,8 +56,16 @@ Q2_ws := H!Eltseq(Q2);
 tau := (m(A.1)); //hyperelliptic involution
 sigma := m(A.3);
 tau(Q1_ws) eq H!Eltseq(to_ws(smallpts[7]));
-assert jmap(smallpts[7]) eq 0; //CM by -3
+assert jmap(smallpts[7]) eq P1![0,1]; //CM by -3
 tau(Q2_ws) eq  H!Eltseq(to_ws(smallpts[9]));
-assert jmap(smallpts[9]) eq -262537412640768000; //CM by -163
+assert jmap(smallpts[9]) eq P1![-262537412640768000,1]; //CM by -163
 
-
+//show that there are no other rational points corresponding to these j-invariants
+pt1 := P1![j1, 1];
+pt2 := P1![j2, 1];
+inv_image1 := pt1@@jmap;
+inv_image2 := pt2@@jmap;
+assert Dimension(inv_image1) eq 0;
+assert Dimension(inv_image2) eq 0;
+assert #RationalPoints(inv_image1) eq 1;
+assert #RationalPoints(inv_image2) eq 1; 
