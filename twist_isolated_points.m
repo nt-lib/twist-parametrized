@@ -1,5 +1,3 @@
-//Should be run in twist-parametrized directory
-
 AttachSpec("TwistParametrized.spec");
 Z := OpenImageContext("OpenImage/data-files");
 
@@ -55,12 +53,15 @@ function IsTwistParametrized(G)
             H:=a`G;
             HH:=GL2Lift(H, N);
         end if;
-		tr,conj_el:=IsConjugateSubgroup(G2, HH, Gag);
+		tr,conj_el:=IsConjugateSubgroup(G2, HH, Gag);//Gag^conj_el is a subgroup of HH;
         if not tr then continue; end if;
 		Gag:=Conjugate(Gag,conj_el);
-        if not IsNormal(HH,Gag) then continue; end if;
-		if not IsAbelian(HH/Gag) then continue; end if;
-        Append(~base_groups,a);
+		for R in Conjugates(G2,Gag) do
+			if not R subset HH then continue; end if;
+			if not IsNormal(HH,R) then continue; end if;
+			if not IsAbelian(HH/R) then continue; end if;
+			Append(~base_groups,a);
+		end for;
     end for;
     if #base_groups eq 0 then
         return false, base_groups;
@@ -114,53 +115,6 @@ surprise_groups := [];
     return true, surprise_groups;
 end function;
 
-
-
-keys:=SetToSequence(Keys(data));
-A1:=data[keys[1]];
-
-
-
-
-// t[1] is a potentially exceptional j invariant
-// t[2] is a bolean that is true if t[1] is NOT exceptional
-// See the documentation FindAgreeableClosure for more info what t[3] and
-// t[4] mean.
-
-exceptional_j := [t[1] : t in Z["ExceptionalAgreeableClosures"] | not t[2]];
-imgs_ag := AssociativeArray();
-imgs := AssociativeArray();
-imgs_sl2 :=  AssociativeArray();
-for j in exceptional_j do
-    not_exceptional, label, G := FindAgreeableClosure(Z,j);
-    assert not not_exceptional;
-    N := GL2LevelOfDefinition(G);
-    index := ExactQuotient(GL2Size(N),Order(G));
-    gens := GL2Generators(G);
-    G := GL2FromGenerators(N, index, gens);
-    imgs_ag[j] := G;
-    G, index, G_SL2 := FindOpenImage(Z,EllipticCurveFromjInvariant(j));
-    N :=  GL2LevelOfDefinition(G);
-    gens := GL2Generators(G);
-    G := GL2FromGenerators(N, index, gens);
-    imgs[j] := G;
-    imgs_sl2[j] := G_SL2;
-end for;
-
-// We now check which j invariants are isolated. We check whether X_G^ag is twist parametirzed or isolated
-
-isolated_j := [];
-todo := AssociativeArray();
-for j in exceptional_j do
-    G := imgs_ag[j];
-    print j, Integers()! GL2Level(G),  GL2Index(G);
-    time parametrized, groups := IsTwistParametrized(G);
-    if parametrized then
-        todo[j] := groups;
-    else
-        Append(~isolated_j, j);
-    end if;
-end for;
 
 assert #isolated_j eq 41;
 assert #todo eq 40;
