@@ -62,3 +62,20 @@ fib_int := fib_psi1 meet fib_psi2;
 assert Degree(fib_int) eq 1; //only one point
 assert RationalPoints(fib_int)[1] eq pts[3]; //the point is pts[3]
 
+im_4psi1 := psi1(pts[4]);
+im_4psi2 := psi2(pts[4]);
+fib_psi1 := im_4psi1@@psi1;
+fib_psi2 := im_4psi2@@psi2;
+fib_int := fib_psi1 meet fib_psi2;
+assert Degree(fib_int) eq 1; //only one point
+assert RationalPoints(fib_int)[1] eq pts[4]; //the point is pts[4]
+
+
+//Uniqueness of the involution
+X7 := ChangeRing(X, GF(7));
+A7 := AutomorphismGroup(Xp);
+X5 := ChangeRing(X, GF(5));
+A5 := AutomorphismGroup(X5);
+assert #A7 eq 2;
+assert #A5 eq 2;
+
