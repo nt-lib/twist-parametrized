@@ -18,4 +18,3 @@ j := P1![2^4 * 3^2* 5^7 * 23^3, 1];
 inv_image := j@@jmap;
 assert Dimension(inv_image) eq 0;
 assert #RationalPoints(inv_image) eq 1; //note that rational points provably returns the rational points in dim = 0
-
