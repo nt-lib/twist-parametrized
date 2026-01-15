@@ -7,7 +7,6 @@ function ReadAgreeableDatafile(filename)
         b,y:=ReadObjectCheck(I);
         if b then
             if not y`is_agreeable then
-                // print y`is_entangled, y`key;
                 continue;
             end if;
             if y`genus ge 2 then
