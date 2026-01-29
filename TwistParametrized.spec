@@ -1,14 +1,37 @@
 {
   lmfdb-magma
   {
-    +lmfdb.spec
+    +lmfdb-no-dependencies.spec
   }
-  Magma
+  # Magma
+  # {
+  #  +magma.spec
+  # }
+  # OpenImage
+  # {
+  #   +OpenImage.spec
+  # }
+  # Modular
+  # {
+  #  main
+  #  {
+  #      Modular.m
+  #  }
+  #
+  #  earlier_code
+  #  {
+  #      CPdata
+  #      {
+  #          CPdata.m
+  #      }
+  #  }
+  #}
+  Modular
   {
-    +magma.spec
+    +Modular.spec
   }
-  OpenImage
+  ModCrvToEC
   {
-    +OpenImage.spec
+    ModCrvToEC.m
   }
 }

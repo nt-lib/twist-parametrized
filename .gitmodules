@@ -7,3 +7,9 @@
 [submodule "lmfdb-magma"]
 	path = lmfdb-magma
 	url = https://github.com/nt-lib/lmfdb-magma.git
+[submodule "ModCrvToEC"]
+	path = ModCrvToEC
+	url = https://github.com/rouseja/ModCrvToEC.git
+[submodule "Modular"]
+	path = Modular
+	url = https://github.com/davidzywina/Modular.git
