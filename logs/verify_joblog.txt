@@ -1,0 +1,14 @@
+Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command
+4	:	1769705631.981	     3.746	0	0	0	0	magma -n fibersplicingXS4.m >| logs/fibersplicingXS4.txt
+11	:	1769705635.731	     2.289	0	0	0	0	magma -n twist_isolated_j_families.m >| logs/twist_isolated_j_families.txt
+8	:	1769705632.000	    10.977	0	0	0	0	magma -n genus4.m >| logs/genus4.txt
+9	:	1769705632.003	    11.106	0	0	0	0	magma -n genus7.m >| logs/genus7.txt
+7	:	1769705631.996	    11.698	0	0	0	0	magma -n genus3.m >| logs/genus3.txt
+12	:	1769705638.024	     6.726	0	0	0	0	magma -n twist_isolated_points.m >| logs/twist_isolated_points.txt
+13	:	1769705642.983	     2.576	0	0	0	0	magma -n XS413.m >| logs/XS413.txt
+10	:	1769705632.010	    13.943	0	0	0	0	magma -n NonSerre.m >| logs/NonSerre.txt
+1	:	1769705631.972	    14.675	0	0	0	0	magma -n AgreeableCurves.m >| logs/AgreeableCurves.txt
+5	:	1769705631.986	    17.468	0	0	0	0	magma -n genus0.m >| logs/genus0.txt
+3	:	1769705631.978	    59.006	0	0	0	0	magma -n fibersplicing36.m >| logs/fibersplicing36.txt
+6	:	1769705631.992	    63.691	0	0	0	0	magma -n genus2.m >| logs/genus2.txt
+2	:	1769705631.975	   133.877	0	0	0	0	magma -n fibersplicing20.m >| logs/fibersplicing20.txt

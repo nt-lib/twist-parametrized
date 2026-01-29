@@ -1,0 +1,31 @@
+Magma V2.29-4     Thu Jan 29 2026 17:54:00 on euler    [Seed = 2696048780]
+Type ? for help.  Type <Ctrl>-D to quit.
+
+Loading file "twist_isolated_points.m"
+
+In file "twist_isolated_points.m", line 2, column 6:
+>> Z := OpenImageContext("OpenImage/data-files");^M
+        ^
+User error: Identifier 'OpenImageContext' has not been declared or assigned
+
+In file "twist_isolated_points.m", line 130, column 31:
+>> exceptional_j := [t[1] : t in Z["ExceptionalAgreeableClosures"] | not t[2]]
+                                 ^
+User error: Identifier 'Z' has not been declared or assigned
+
+In file "twist_isolated_points.m", line 134, column 10:
+>> for j in exceptional_j do^M
+            ^
+User error: Identifier 'exceptional_j' has not been declared or assigned
+
+In file "twist_isolated_points.m", line 154, column 10:
+>> for j in exceptional_j do^M
+            ^
+User error: Identifier 'exceptional_j' has not been declared or assigned
+
+In file "twist_isolated_points.m", line 166, column 1:
+>> assert #isolated_j eq 41;^M
+   ^
+Runtime error in assert: Assertion failed
+
+Total time: 4.219 seconds, Total memory usage: 499.12MB

@@ -1,0 +1,10 @@
+Magma V2.29-4     Thu Jan 29 2026 17:54:05 on euler    [Seed = 3064227486]
+Type ? for help.  Type <Ctrl>-D to quit.
+
+Loading file "XS413.m"
+true
+true
+[ (90616364985637924505590372621162077487104/197650497353702094308570556640625 :
+1), (1728 : 1), (1728 : 1), (11225615440/1594323 : 1) ]
+
+Total time: 0.070 seconds, Total memory usage: 32.09MB
