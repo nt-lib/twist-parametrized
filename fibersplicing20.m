@@ -2,8 +2,8 @@
 //This is for 20.36.1.a.1
 
 SetSeed(508722640,0);
-AttachSpec("../Modular/Modular.spec");
-Attach("ModCrvToEC.m");
+AttachSpec("TwistParametrized.spec");
+
 N := 20;
 gens := [[0, 1, 11, 7], [0, 1, 19, 1], [0, 3, 1, 0], [0, 3, 13, 1], [0, 11, 1, 17], [1, 7, 11, 16]];
 ModEC := InitializeModEC(N,gens : precmult := 2);

@@ -4,8 +4,8 @@
 //This is for 36.108.6.g.1
 
 SetSeed(1258402571,21268947);
-AttachSpec("../Modular/Modular.spec"); 
-Attach("ModCrvToEC.m"); 
+AttachSpec("TwistParametrized.spec");
+
 N := 36; 
 gens := [[0, 1, 35, 28], [0, 13, 31, 20], [1, 17, 10, 27], [2, 5, 5, 18], [2 ,23, 23, 27], [4, 1, 23, 24]];
 ModEC := InitializeModEC(N,gens);

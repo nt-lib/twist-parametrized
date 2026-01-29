@@ -1,7 +1,7 @@
 //This is for XS4(13)
 SetSeed(2101219762,0);
-AttachSpec("../Modular/Modular.spec");
-Attach("ModCrvToEC.m");
+AttachSpec("TwistParametrized.spec");
+
 N := 78;
 gens := [[0, 7, 61, 0], [1, 0, 26, 1], [1, 1, 64, 27], [1, 26, 0, 1], [3, 2, 29, 37], [27, 26, 52, 53], [52, 27, 51, 13], [52, 57, 57, 13], [55, 3, 15, 76]];
 //don't need to check lmfdb j-map because we already know rational points from Banwait-Cremona
