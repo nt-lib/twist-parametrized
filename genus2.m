@@ -17,7 +17,7 @@ assert (A.1)(smallpts[1]) eq smallpts[2];
 //show that there are no other rational points corresponding to these j-invariants by inverting the j-map
 j := P1![210720960000000/16807, 1];
 inv_image := j@@jmap;
-asesert Dimension(inv_image) eq 0;
+assert Dimension(inv_image) eq 0;
 assert #RationalPoints(inv_image) eq 1; //note that rational points provably returns the rational points in dim = 0
 
 //Xns^+(16)
