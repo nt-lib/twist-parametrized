@@ -1,4 +1,8 @@
 {
+  lmfdb-magma
+  {
+    +lmfdb.spec
+  }
   Magma
   {
     +magma.spec

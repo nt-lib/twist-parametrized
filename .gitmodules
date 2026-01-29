@@ -4,3 +4,6 @@
 [submodule "Magma"]
 	path = Magma
 	url = git@github.com:AndrewVSutherland/Magma.git
+[submodule "lmfdb-magma"]
+	path = lmfdb-magma
+	url = https://github.com/nt-lib/lmfdb-magma.git
