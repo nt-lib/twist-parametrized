@@ -1,0 +1,6 @@
+Magma V2.29-4     Mon Feb  2 2026 16:47:55 on euler    [Seed = 3560785769]
+Type ? for help.  Type <Ctrl>-D to quit.
+
+Loading file "attach4.m"
+
+Total time: 0.050 seconds, Total memory usage: 32.09MB

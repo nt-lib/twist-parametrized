@@ -1,6 +1,0 @@
-Magma V2.29-4     Thu Jan 29 2026 17:53:55 on euler    [Seed = 2676838334]
-Type ? for help.  Type <Ctrl>-D to quit.
-
-Loading file "genus4.m"
-
-Total time: 7.070 seconds, Total memory usage: 184.72MB
