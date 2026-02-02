@@ -18,7 +18,7 @@ P5<x,y,z,w,t,u> := Ambient(Domain(map1[1]));
 X := Domain(map1[1]);
 pts := PointSearch(X, 100);
 assert psi2(pts[1]) eq psi2(pts[2]); //both map to F!0
-assert psi1(pts[1]) ne psi1(pts[1]);
+assert psi1(pts[1]) ne psi1(pts[2]);
 F := Codomain(psi2);
 E := Codomain(psi1);
 pre_im_psi1 := (psi1(pts[1]))@@psi1;

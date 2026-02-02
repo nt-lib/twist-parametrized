@@ -77,7 +77,7 @@ fib_psi1 := im_4psi1@@psi1;
 fib_psi2 := im_4psi2@@psi2;
 fib_int := fib_psi1 meet fib_psi2;
 assert Degree(fib_int) eq 1; //only one point
-assert RationalPoints(fib_int)[1] eq pts[4]; //the point is pts[4]
+assert RationalPoints(fib_int)[1] eq pts[1]; //the point is pts[1]
 
 print "Checking uniqueness of involution...";
 //Uniqueness of the involution
