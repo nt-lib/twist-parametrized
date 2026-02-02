@@ -6,8 +6,10 @@ AttachSpec("TwistParametrized.spec");
 
 N := 20;
 gens := [[0, 1, 11, 7], [0, 1, 19, 1], [0, 3, 1, 0], [0, 3, 13, 1], [0, 11, 1, 17], [1, 7, 11, 16]];
-ModEC := InitializeModEC(N,gens : precmult := 2);
+ModEC := InitializeModEC(N,gens : precmult := 2, Verbose := true);
 Iso, Mx := EllipticCurveQuoCandidates(ModEC);
+pts := PointSearch(ModEC`XG,100);
+ModEC`BasePt := pts[1];
 map1 := FindMapsToEC(ModEC, [[ 0, 0, 0, 5, 10 ]], [1]); 
 psi := map1[1];
 map2 := FindMapsToEC(ModEC, [[ 0, -1, 0, 4, -4 ]], [1]); 

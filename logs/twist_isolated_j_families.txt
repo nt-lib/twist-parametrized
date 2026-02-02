@@ -1,4 +1,4 @@
-Magma V2.29-4     Thu Jan 29 2026 17:53:57 on euler    [Seed = 2626571449]
+Magma V2.29-4     Mon Feb  2 2026 14:26:37 on euler    [Seed = 2689159899]
 Type ? for help.  Type <Ctrl>-D to quit.
 
 Loading file "twist_isolated_j_families.m"
