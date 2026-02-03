@@ -1,4 +1,4 @@
-Magma V2.29-4     Mon Feb  2 2026 14:26:37 on euler    [Seed = 2839567314]
+Magma V2.29-4     Mon Feb  2 2026 17:20:51 on euler    [Seed = 1521729540]
 Type ? for help.  Type <Ctrl>-D to quit.
 
 Loading file "twist_isolated_points.m"
@@ -28,4 +28,4 @@ In file "twist_isolated_points.m", line 166, column 1:
    ^
 Runtime error in assert: Assertion failed
 
-Total time: 4.410 seconds, Total memory usage: 499.12MB
+Total time: 2.950 seconds, Total memory usage: 499.12MB

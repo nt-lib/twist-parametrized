@@ -1,4 +1,4 @@
-Magma V2.29-4     Mon Feb  2 2026 14:26:29 on euler    [Seed = 801561948]
+Magma V2.29-4     Mon Feb  2 2026 17:20:44 on euler    [Seed = 3475396014]
 Type ? for help.  Type <Ctrl>-D to quit.
 
 Loading file "fibersplicing20.m"
@@ -295,7 +295,7 @@ Best elliptic curve 1 is [ 0, 0, 0, 5, 10 ]. The Manin constant is 1/40.
 Starting modular degree computation.
 Computing 120 periods.
 Analytic modular degree is 30.
-Time to compute analytic modular degree: 16.530
+Time to compute analytic modular degree: 16.030
 Minimal modular degree is 30. Choosing elliptic curve [ 0, 0, 0, 5, 10 ].
 Image of cusp 1 has order 1 on elliptic curve.
 Point is (0 : 1 : 0).
@@ -337,13 +337,13 @@ Generating degree 8 piece of canonical ring.
 Generating degree 9 piece of canonical ring.
 Searching for map 1 of 1.
 For d = 9, dimension of null space is 0.
-Null space time was 0.910 sec.
+Null space time was 0.870 sec.
 Generating degree 10 piece of canonical ring.
 Searching for map 1 of 1.
 For d = 10, dimension of null space is 5.
-Null space time was 13.100 sec.
+Null space time was 12.700 sec.
 Null space vector 1 of 5 is good.
-Time to realize x,y over cyclotomic field: 67.610
+Time to realize x,y over cyclotomic field: 65.730
 Starting cyclotomic map evaluation.
 Map 1 goes from XG to curve [ 0, 0, 0, 5, 10 ]. Base point (-1 : -1 : -1 : 1 : 
 -1 : 1) maps to (678639/46225 : -566379662/9938375 : 1).
@@ -368,7 +368,7 @@ Checking compatability of map equation 1 and 5.
 Checking compatability of map equation 2 and 5.
 Checking compatability of map equation 3 and 5.
 Checking compatability of map equation 4 and 5.
-Time to realize x,y over rationals: 535.490
+Time to realize x,y over rationals: 526.370
 Trying to find Hecke matrix for p = 3.
 Trying to find Hecke matrix for p = 7.
 Nicefying 1x6768 matrix.
@@ -380,7 +380,7 @@ Best elliptic curve 1 is [ 0, -1, 0, -1, 0 ]. The Manin constant is 1/20.
 Starting modular degree computation.
 Computing 120 periods.
 Analytic modular degree is 12.
-Time to compute analytic modular degree: 13.530
+Time to compute analytic modular degree: 13.390
 Minimal modular degree is 12. Choosing elliptic curve [ 0, -1, 0, -1, 0 ].
 Image of cusp 1 has order 1 on elliptic curve.
 Point is (0 : 1 : 0).
@@ -417,13 +417,13 @@ Generating degree 3 piece of canonical ring.
 Generating degree 4 piece of canonical ring.
 Searching for map 1 of 1.
 For d = 4, dimension of null space is 0.
-Null space time was 0.120 sec.
+Null space time was 0.110 sec.
 Generating degree 5 piece of canonical ring.
 Searching for map 1 of 1.
 For d = 5, dimension of null space is 9.
-Null space time was 0.740 sec.
+Null space time was 0.710 sec.
 Null space vector 1 of 9 is good.
-Time to realize x,y over cyclotomic field: 5.100
+Time to realize x,y over cyclotomic field: 4.990
 Starting cyclotomic map evaluation.
 Map 1 goes from XG to curve [ 0, -1, 0, -1, 0 ]. Base point (-1 : -1 : -1 : 1 : 
 -1 : 1) maps to (0 : 1 : 0).
@@ -448,10 +448,10 @@ Checking compatability of map equation 1 and 5.
 Checking compatability of map equation 2 and 5.
 Checking compatability of map equation 3 and 5.
 Checking compatability of map equation 4 and 5.
-Time to realize x,y over rationals: 5.490
+Time to realize x,y over rationals: 5.380
 
 In file "fibersplicing20.m", line 21, column 8:
->> assert psi1(pts[1]) ne psi1(pts[1]);
+>> assert psi1(pts[1]) ne psi1(pts[2]);
           ^
 User error: Identifier 'psi1' has not been declared or assigned
 
@@ -472,5 +472,4 @@ Runtime error in '!': Illegal coercion
 LHS: MapSch
 RHS: RngIntElt
 
-Total time: 735.340 seconds, Total memory usage: 627.59MB
-
+Total time: 721.750 seconds, Total memory usage: 627.59MB
