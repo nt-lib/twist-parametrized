@@ -1,4 +1,4 @@
-Magma V2.29-4     Thu Jan 29 2026 17:53:57 on euler    [Seed = 2626571449]
+Magma V2.29-4     Wed Feb  4 2026 01:03:34 on euler    [Seed = 2187944876]
 Type ? for help.  Type <Ctrl>-D to quit.
 
 Loading file "twist_isolated_j_families.m"
@@ -19,4 +19,4 @@ In file "twist_isolated_j_families.m", line 43, column 26:
 Runtime error in '[]': Value for given index is not set
 
 
-Total time: 0.020 seconds, Total memory usage: 32.09MB
+Total time: 0.030 seconds, Total memory usage: 32.09MB

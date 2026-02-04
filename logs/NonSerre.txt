@@ -1,4 +1,4 @@
-Magma V2.29-4     Thu Jan 29 2026 17:53:55 on euler    [Seed = 1853668940]
+Magma V2.29-4     Wed Feb  4 2026 01:03:27 on euler    [Seed = 2940489368]
 Type ? for help.  Type <Ctrl>-D to quit.
 
 Loading file "NonSerre.m"
@@ -74,4 +74,4 @@ Only Disc: { 10.10.0.a.1, 4.8.0.b.1, 2.2.0.a.1, 4.2.0.a.1, 20.10.0.a.1 }
 Only Entanglement: { 6.6.0.b.1, 30.30.1.a.1 }
 Only Gal3: { 9.27.0.a.1 }
 
-Total time: 7.900 seconds, Total memory usage: 499.12MB
+Total time: 8.009 seconds, Total memory usage: 499.12MB

@@ -1,0 +1,43 @@
+name: Release (with submodules)
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write   # required to upload release assets
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Set release variables
+        run: |
+          echo "TAG_NAME=${GITHUB_REF_NAME}" >> $GITHUB_ENV
+          echo "ARCHIVE_NAME=${GITHUB_REPOSITORY##*/}-${GITHUB_REF_NAME}" >> $GITHUB_ENV
+
+      - name: Create release archive including submodules
+        run: |
+          mkdir dist
+          tar \
+            --exclude=.git \
+            --exclude=.github \
+            -czf dist/${ARCHIVE_NAME}.tar.gz \
+            .
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ env.TAG_NAME }}
+          tag_name: ${{ env.TAG_NAME }}
+          files: |
+            dist/${{ env.ARCHIVE_NAME }}.tar.gz
+

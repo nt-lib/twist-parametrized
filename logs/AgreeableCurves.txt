@@ -1,6 +1,6 @@
-Magma V2.29-4     Thu Jan 29 2026 17:53:55 on euler    [Seed = 3603171060]
+Magma V2.29-4     Wed Feb  4 2026 01:03:26 on euler    [Seed = 82830642]
 Type ? for help.  Type <Ctrl>-D to quit.
 
 Loading file "AgreeableCurves.m"
 
-Total time: 10.789 seconds, Total memory usage: 639.56MB
+Total time: 11.650 seconds, Total memory usage: 639.56MB
