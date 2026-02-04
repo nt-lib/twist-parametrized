@@ -4,13 +4,13 @@ This repository contains code accompanying the paper `Rational points on modular
 
 ## Requirements
 
-This package has been verified to work with [magma](https://magma.maths.usyd.edu.au/) version v2.29-4. Later versions should also work.
+This package has been verified to work with [Magma](https://Magma.maths.usyd.edu.au/) version v2.29-4. Later versions might also work.
 If you want to easily verify all computations in parallel you will also need [GNU Parallel](https://www.gnu.org/software/parallel/).
 
 ## Download
 
-The [latest release](https://github.com/nt-lib/twist-parametrized/releases/latest) of this magma package, including all depencies except
-magma and gnu paralelm can be obtained from the aforementioned link. One just needs to download and unpack the contents of the file whose
+The [latest release](https://github.com/nt-lib/twist-parametrized/releases/latest) of this Magma package, including all depencies except
+Magma and GNU Parallel can be obtained from the aforementioned link. One just needs to download and unpack the contents of the file whose
 name looks like `twist-parametrized-v0.0.1.tar.gz`. Of course the version number `v0.0.1` might be different.
 
 
@@ -37,7 +37,7 @@ Logs of these results will automatically be written to the [logs](https://github
 
 ## Using the dependencies
 
-This repository depends on [several magma packages](https://github.com/nt-lib/twist-parametrized/blob/main/.gitmodules). All these
+This repository depends on [several Magma packages](https://github.com/nt-lib/twist-parametrized/blob/main/.gitmodules). All these
 dependencies can be easily loaded by attaching 
 [TwistParametrized.spec](https://github.com/nt-lib/twist-parametrized/blob/main/TwistParametrized.spec) by using:
 
@@ -45,5 +45,5 @@ dependencies can be easily loaded by attaching
 AttachSpec("TwistParametrized.spec");
 ```
 
-The above command needs to be run from magma session that was started inside the root directory of this repository. Starting magma from
+The above command needs to be run from Magma session that was started inside the root directory of this repository. Starting Magma from
 other locations is also possible but then the path `"TwistParametrized.spec"` needs to be adjusted accordingly.
