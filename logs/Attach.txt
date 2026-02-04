@@ -1,4 +1,4 @@
-Magma V2.29-4     Mon Feb  2 2026 17:20:44 on euler    [Seed = 3594472631]
+Magma V2.29-4     Wed Feb  4 2026 01:03:26 on euler    [Seed = 4229373387]
 Type ? for help.  Type <Ctrl>-D to quit.
 
 Loading file "Attach.m"
