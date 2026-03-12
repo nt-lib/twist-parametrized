@@ -1,9 +1,9 @@
 [submodule "OpenImage"]
 	path = OpenImage
-	url = git@github.com:nt-lib/OpenImage.git
+	url = https://github.com/nt-lib/OpenImage.git
 [submodule "Magma"]
 	path = Magma
-	url = git@github.com:AndrewVSutherland/Magma.git
+	url = https://github.com/AndrewVSutherland/Magma.git
 [submodule "lmfdb-magma"]
 	path = lmfdb-magma
 	url = https://github.com/nt-lib/lmfdb-magma.git
